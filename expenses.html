@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle Financeiro</title>
+    <meta name="description" content="Prospera ae" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <div class="modal-add-expenses">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cadastrar despesas</h2>
+                <i class="bi bi-x close-modal-add-expenses"></i>
+            </div>
+            <form class="form-add-expenses">
+                <div class="group-input">
+                    <label>Nome</label>
+                    <input type="text" name="name" id="name-expense" class="input-login" placeholder="Digite o nome da despesa"/>
+                </div>
+                <div class="group-input">
+                    <label>Setor</label>
+                    <select name="sector" id="sector-expenses" class="input-login">
+                        <option disabled selected>Selecione o setor</option>
+                        <option value="sector-a">Setor A</option>
+                        <option value="sector-b">Setor B</option>
+                        <option value="sector-c">Setor C</option>
+                        <option value="sector-d">Setor D</option>
+                    </select>
+                </div>
+                <div class="group-input">
+                    <label>Forma de pagamento</label>
+                    <select name="payment-method" id="payment-metod" class="input-login">
+                        <option disabled selected>Selecione a forma de pagamento</option>
+                        <option value="credit-card">Cartão de crédito</option>
+                        <option value="debit-card">Cartão de débito</option>
+                        <option value="money">Dinheiro</option>
+                    </select>
+                </div>
+                <div class="group-input">
+                    <label>Valor</label>
+                    <input type="text" name="value" id="value-expenses" class="input-login" placeholder="Digite o valor da despesa"/>
+                </div>
+                <div class="group-input">
+                    <label>Parcelas</label>
+                    <input type="number" name="installments" id="installments" class="input-login" placeholder="Digite o número de parcelas"/>
+                </div>
+                <div class="group-input">
+                    <label>Status</label>
+                    <select name="status" id="status-expenses" class="input-login">
+                        <option disabled selected>Selecione o status</option>
+                        <option value="paid">Pago</option>
+                        <option value="pending">Pendente</option>
+                    </select>
+                </div>
+                <div class="group-input">
+                    <label>Data</label>
+                    <input type="date" id="date-expenses" class="input-login"/>
+                </div>
+                <input type="submit" value="Adicionar" class="submit-form-login"/>
+            </form>
+        </div>
+    </div>    
+        <div class="modal-delete-expenses">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Excluir despesa</h2>
+                    <i class="bi bi-x close-modal-delete-expenses"></i>
+                </div>
+                <div class="modal-body">
+                    <p>Deseja realmente excluir essa despesa?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="cancel-button cancel-delete-expenses">Cancelar</button>
+                    <button class="delete-button confirm-delete-expenses">Excluir</button>
+                </div>
+            </div>
+        </div>
+    <section id="dashboard">
+        <div class="menu-bar">
+            <div class="header-bar">
+                <img src="./assets/logo.svg" width="40px" alt="Prospera Aê"/>
+            </div>
+            <div class="content-intern-menu">
+                <div class="option-menu">
+                    <div class="action">
+                        <img src="./assets/icon-menu.svg">
+                        <span>Menu</span>
+                    </div>
+                    <span class="toggle-menu">></span>
+                </div>
+                    <nav class="menu-dashboard">
+                    <ul>
+                        <li><a href="incomes.html">Receitas</a></li>
+                        <li><a href="expenses.html">Despesas</a></li>
+                        <li><a href="user.html">Usuários</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="info-user-logged">
+                <img src="./assets/user-profile.png" alt="Usuário logado Prospera Aê"/>
+                <div class="info-user">
+                    <span>Nome do usuário</span>
+                    <span>email@prosperae</span>
+                </div>
+            </div>
+        </div>
+
+                    <!--aqui começa a seção de content-->
+
+        <div class="content-right">
+            <div class="content-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li>Despesas</li>
+                </ol>
+                <img src="./assets/notifications.svg" alt="Notificações Prospera Aê" width="20px"/>
+            </div>
+            <div class="module-container">
+                <h1 class="title-module">Despesas</h1>
+                <nav class="menu-module">
+                    <ul>
+                        <li class="item-module-active">Setor A</li>
+                        <li>Setor B</li>
+                        <li>Setor C</li>
+                        <li>Setor D</li>
+                    </ul>
+                </nav>
+                <div class="content-module">
+                    <div class="header-module">
+                        <h2>Lista de transações</h2>
+                        <button class="add-button" id="add-new-expense">Adicionar nova despesa <span>+</span></button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Digite o nome da despesa" class="search-input"/>
+                        <i class="bi bi-search search-icon"></i>
+                    </div>
+                    <table class="values-items" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Forma de pgto</th>
+                                <th>Parcelas</th>
+                                <th>Status</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th>Quitar</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Conta de luz</td>
+                                <td>Cartão de crédito</td>
+                                <td>1</td>
+                                <td><span class="paid-status">Pago</span></td>
+                                <td>-</td>
+                                <td>R$ 150,00</td>
+                                <td>-</td>
+                                <td>
+                                    <div class="action-table">
+                                      <div class="content-delete">
+                                        <i class="bi bi-trash delete-icon btn-delete-expenses"></i>
+                                        <span class="hover-delete">Deletar</span>
+                                      </div>
+                                      <div class="content-edit">
+                                        <i class="bi bi-pencil edit-icon" id="edit-expenses-action"></i>
+                                        <span class="hover-edit">Editar</span>
+                                      </div>
+                                    </div>
+                                  </td>                                  
+                            </tr>
+                            <tr>
+                                <td>Transporte</td>
+                                <td>Dinheiro</td>
+                                <td>0</td>
+                                <td><span class="pending-status">Pendente</span></td>
+                                <td>-</td>
+                                <td>R$ 150,00</td>
+                                <td><span class="pending-payment">Pagar</span></td>
+                                <td>
+                                    <div class="action-table">
+                                        <div class="content-delete">
+                                            <i class="bi bi-trash delete-icon btn-delete-expenses"></i>
+                                            <span class="hover-delete">Deletar</span>
+                                        </div>
+                                        <div class="content-edit">
+                                            <i class="bi bi-pencil edit-icon" id="edit-expenses-action"></i>
+                                            <span class="hover-edit">Editar</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  </html>

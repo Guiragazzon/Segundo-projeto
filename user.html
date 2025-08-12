@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle Financeiro</title>
+    <meta name="description" content="Prospera ae" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <div class="modal-add-user">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cadastrar usuário</h2>
+                <i class="bi bi-x close-modal-add-user"></i>
+            </div>
+            <form class="form-add-user">
+                <div class="group-input">
+                    <label>Nome</label>
+                    <input type="text" name="name" id="name-user" class="input-login" placeholder="Digite o nome do usuário"/>
+                </div>
+                <div class="group-input">
+                    <label>E-mail</label>
+                    <input type="email" name="email" id="email-user" class="input-login" placeholder="Digite o email do usuário"/>
+                </div>
+                <div class="group-input">
+                    <label>Senha</label>
+                    <input type="password" id="password-user" class="input-login" placeholder="Digite a senha do usuário"/>
+                </div>
+                <input type="submit" value="Adicionar" class="submit-form-login"/>
+            </form>
+        </div>
+    </div>    
+        <div class="modal-delete-user">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Excluir usuário</h2>
+                    <i class="bi bi-x close-modal-delete-user"></i>
+                </div>
+                <div class="modal-body">
+                    <p>Deseja realmente excluir esse usuário?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="cancel-button cancel-delete-user">Cancelar</button>
+                    <button class="delete-button confirm-delete-user">Excluir</button>
+                </div>
+            </div>
+        </div>
+    <section id="dashboard">
+        <div class="menu-bar">
+            <div class="header-bar">
+                <img src="./assets/logo.svg" width="40px" alt="Prospera Aê"/>
+            </div>
+            <div class="content-intern-menu">
+                <div class="option-menu">
+                    <div class="action">
+                        <img src="./assets/icon-menu.svg">
+                        <span>Menu</span>
+                    </div>
+                    <span class="toggle-menu">></span>
+                </div>
+                    <nav class="menu-dashboard">
+                    <ul>
+                        <li><a href="incomes.html">Receitas</a></li>
+                        <li><a href="expenses.html">Despesas</a></li>
+                        <li><a href="user.html">Usuários</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="info-user-logged">
+                <img src="./assets/user-profile.png" alt="Usuário logado Prospera Aê"/>
+                <div class="info-user">
+                    <span>Nome do usuário</span>
+                    <span>email@prosperae</span>
+                </div>
+            </div>
+        </div>
+
+                    <!--aqui começa a seção de content-->
+
+        <div class="content-right">
+            <div class="content-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li>Usuários</li>
+                </ol>
+                <img src="./assets/notifications.svg" alt="Notificações Prospera Aê" width="20px"/>
+            </div>
+            <div class="module-container">
+                <h1 class="title-module">Usuários</h1>
+                <div class="content-module">
+                    <div class="header-module">
+                        <h2>Lista de usuários</h2>
+                        <button class="add-button" id="add-new-user">Adicionar novo usuário<span>+</span></button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Digite o nome do usuário" class="search-input"/>
+                        <i class="bi bi-search search-icon"></i>
+                    </div>
+                    <table class="values-items" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Guilherme Haas Ragazzon</td>
+                                <td>teste@gmail.com</td>
+                                <td>
+                                    <div class="action-table">
+                                        <div class="content-delete">
+                                            <i class="bi bi-trash delete-icon btn-delete-user"></i>
+                                            <span class="hover-delete">Deletar</span>
+                                        </div>
+                                        <div class="content-edit">
+                                            <i class="bi bi-pencil edit-icon" id="edit-user-action"></i>
+                                            <span class="hover-edit">Editar</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gabrieli Bech Ragazzon</td>
+                                <td>teste2@gmail.com</td>
+                                <td>
+                                    <div class="action-table">
+                                        <div class="content-delete">
+                                            <i class="bi bi-trash delete-icon btn-delete-user"></i>
+                                            <span class="hover-delete">Deletar</span>
+                                        </div>
+                                        <div class="content-edit">
+                                            <i class="bi bi-pencil edit-icon" id="edit-user-action"></i>
+                                            <span class="hover-edit">Editar</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  </html>

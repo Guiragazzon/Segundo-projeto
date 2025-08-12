@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle Financeiro</title>
+    <meta name="description" content="Prospera ae" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <section id="dashboard">
+        <div class="menu-bar">
+            <div class="header-bar">
+                <img src="./assets/logo.svg" width="40px" alt="Prospera Aê"/>
+            </div>
+            <div class="content-intern-menu">
+                <div class="option-menu">
+                    <div class="action">
+                        <img src="./assets/icon-menu.svg">
+                        <span>Menu</span>
+                    </div>
+                    <span class="toggle-menu">></span>
+                </div>
+                    <nav class="menu-dashboard">
+                    <ul>
+                        <li><a href="incomes.html">Receitas</a></li>
+                        <li><a href="expenses.html">Despesas</a></li>
+                        <li><a href="user.html">Usuários</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="info-user-logged">
+                <img src="./assets/user-profile.png" alt="Usuário logado Prospera Aê"/>
+                <div class="info-user">
+                    <span>Nome do usuário</span>
+                    <span>email@prosperae</span>
+                </div>
+            </div>
+        </div>
+
+                    <!--aqui começa a seção de content-->
+
+        <div class="content-right">
+            <div class="content-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Início</a></li>
+                    <li>Dashboard</li>
+                </ol>
+                <img src="./assets/notifications.svg" alt="Notificações Prospera Aê" width="20px"/>
+            </div>
+            <div class="module-container">
+                <div class="container-info-total-values">
+                    <div class="card-info-total-values">
+                        <span>Receitas</span>
+                        <span>R$0,00</span>
+                    </div>
+                    <div class="card-info-total-values">
+                        <span>Despesas</span>
+                        <span>R$0,00</span>
+                    </div>
+                    <div class="card-info-total-values">
+                        <span>Saldo</span>
+                        <span>R$0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  </html>

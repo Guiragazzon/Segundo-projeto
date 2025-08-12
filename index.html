@@ -1,10 +1,52 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
-</head>
-<body>
-    
-</body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle Financeiro</title>
+    <meta name="description" content="Prospera ae" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="./style.css"/>
+  </head>
+
+        <!--Aqui começa o corpo do html-->
+
+  <body>
+    <section id="login">
+        <div class="content-login">
+            <div class="header-login">
+                <img src="./assets/logo.svg" alt="Prospera ae"
+                width="70px"/>
+                <h1 class="title-login">Prospera Aê</h1>
+            </div>
+
+                <!--Formulário do login-->
+
+            <form class="form-login" action="dashboard.html">
+                <div class="group-input">
+                    <label>E-mail</label>
+                    <input type="email" name="email" id="email" class="input-login"
+                    placeholder="Seu e-mail"/>
+                </div>
+
+                <!--- aqui começa o group input-->
+
+                <div class="group-input input-password">
+                    <label>Senha</label>
+                    <input type="password" name="password" id="password"
+                    class="input-login" placeholder="Digite a senha"/>
+                <i id="hide-password" class="bi bi-eye"></i>
+                <i id="show-password" class="bi bi-eye-slash"></i>
+                </div>
+                <p class="forgot-password">Esqueceu a senha?</p>
+                <input type="submit" value="Entrar" class="submit-form-login"/>
+            </form>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
 </html>
